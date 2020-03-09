@@ -1,0 +1,31 @@
+{
+  "name": "@deity/example-shop-with-blog-server",
+  "license": "OSL-3.0",
+  "version": "2.0.1",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon index.js | logger-pretty",
+    "start:dbg": "cross-env NODE_ENV=development nodemon --inspect index.js | logger-pretty",
+    "start:dbg-brk": "cross-env NODE_ENV=development nodemon --inspect-brk index.js | logger-pretty",
+    "build:prod": "echo \"This script is not implemented. Implement it in package.json if required.\"",
+    "start:prod": "cross-env NODE_ENV=production node index.js"
+  },
+  "engines": {
+    "node": ">=10.15"
+  },
+  "dependencies": {
+    "@deity/falcon-blog-extension": "^2.0.1",
+    "@deity/falcon-logger": "^2.0.1",
+    "@deity/falcon-magento2-api": "^2.0.1",
+    "@deity/falcon-server": "^2.0.1",
+    "@deity/falcon-shop-extension": "^2.0.1",
+    "@deity/falcon-wordpress-api": "^2.0.1",
+    "config": "^2.0.1",
+    "core-js": "3.2.1",
+    "cross-env": "5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
