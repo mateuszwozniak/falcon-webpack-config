@@ -15,5 +15,25 @@ module.exports = {
   moduleOverride: {
     '@deity/falcon-data/dist/Query/Loader': '@deity/falcon-ui-kit/dist/Loader/Loader',
     '@deity/falcon-data/dist/Query/OperationError': '@deity/falcon-ui-kit/dist/Error/OperationError'
-  }
+  },
+  plugins: [
+    config => {
+      // inject postcss-loader for .css files
+      // the same can be done for scss or css modules
+      config.module.rules.push({
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                require('postcss-each')
+              ]
+            }
+          }
+        ]
+      });
+      return config;
+    }
+  ]
 };

@@ -22,7 +22,9 @@
   },
   "dependencies": {
     "@deity/falcon-logger": "^2.0.1",
-    "cross-env": "5.2.0"
+    "cross-env": "5.2.0",
+    "postcss-each": "^0.10.0",
+    "postcss-loader": "^3.0.0"
   },
   "devDependencies": {
     "@apollo/react-hoc": "^3.1.3",
